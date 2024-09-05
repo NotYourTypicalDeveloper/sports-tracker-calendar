@@ -1,3 +1,4 @@
+import Calendar from "./Calendar";
 import CTASection from "./CTASection";
 
 export default function Hero() {
@@ -13,6 +14,7 @@ export default function Hero() {
         <span className="font-semibold">every day of every year.</span>
       </p>
       <CTASection />
+      <Calendar />
     </div>
   );
 }
