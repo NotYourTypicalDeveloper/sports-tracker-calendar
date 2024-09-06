@@ -8,18 +8,22 @@ export default function Hero() {
   return (
     <div className="flex flex-col gap-8 py-4 md:py-10 sm:gap-10">
       <div className="text-5xl text-center sm:text-6xl md:text-7xl ">
-        <h1 className="textGradient">Be fit and motivated.</h1>
+        <div>
+          {" "}
+          <Image
+            className="ml-2 -rotate-6"
+            src={SneakersSVG}
+            alt="sneakers image"
+            width={70}
+            height={70}
+          />{" "}
+          <h1 className="textGradient">Be fit and motivated.</h1>
+        </div>
+
         <p className="text-balance">
           Track your <span className="textGradient">daily, weekly</span>{" "}
           <span> physical activities!</span>
         </p>
-        <Image
-          className="ml-2 -rotate-6"
-          src={SneakersSVG}
-          alt="sneakers image"
-          width={70}
-          height={70}
-        />
       </div>
 
       <div className="flex mx-auto">

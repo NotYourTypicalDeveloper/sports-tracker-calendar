@@ -5,7 +5,7 @@ import { Fugaz_One } from "next/font/google";
 import Link from "next/link";
 
 const fugaz = Fugaz_One({ subsets: ["latin"], weight: ["400"] });
-console.log(fugaz);
+
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
