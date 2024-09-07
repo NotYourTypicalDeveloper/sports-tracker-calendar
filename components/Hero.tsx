@@ -41,7 +41,6 @@ export default function Hero() {
       </div>
 
       <CTASection />
-      <Calendar />
     </div>
   );
 }

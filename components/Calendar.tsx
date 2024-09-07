@@ -43,7 +43,7 @@ const data: IRating = {
 };
 
 interface ICalendarProps {
-  demo: IRating;
+  demo: boolean;
 }
 
 export default function Calendar(props: ICalendarProps) {

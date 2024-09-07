@@ -5,5 +5,5 @@ type ContainerProps = {
 };
 export default function Container(props: ContainerProps) {
   const { children } = props;
-  return <main className="flex-auto">{children}</main>;
+  return <div className="flex-auto px-8">{children}</div>;
 }
