@@ -75,7 +75,7 @@ export default function DashboardScreen() {
                 className={
                   "p-4 px-5 rounded-2xl purpleShadow duration-200 bg-indigo-50 hover:bg-indigo-100 text-center flex flex-col items-center gap-2 flex-1 "
                 }
-                key={`sport ${sportIndex}`}
+                key={`sport${sportIndex}`}
               >
                 <p className="text-4xl sm:text-5xl md:text-6xl">
                   {sports[sport]}

@@ -43,7 +43,7 @@ const data: IRating = {
 };
 
 interface ICalendarProps {
-  demo: boolean;
+  demo?: boolean;
 }
 
 export default function Calendar(props: ICalendarProps) {
@@ -61,7 +61,7 @@ export default function Calendar(props: ICalendarProps) {
   const numRows = Math.floor(daysToDisplay / 7) + (daysToDisplay % 7 ? 1 : 0);
 
   return (
-    <div className="flex flex-col gap-1 overflow-hidden">
+    <div className="flex flex-col gap-1 py-4 overflow-hidden sm:py-6 md:py-10">
       {[...Array(numRows).keys()].map((row, rowIndex) => {
         return (
           <div key={`calRow-${rowIndex}`} className="grid grid-cols-7 gap-1">
