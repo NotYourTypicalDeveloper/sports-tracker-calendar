@@ -8,6 +8,8 @@ import {
   User as FirebaseUser,
   UserCredential,
 } from "firebase/auth";
+import { doc, getDoc } from "firebase/firestore";
+
 import React, {
   createContext,
   useContext,
@@ -61,6 +63,17 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       if (user) {
         setCurrentUser(user);
       }
+      // if user exists, fetch data from firestore DB
+      console.log("fetching user data");
+      const docRef = user && doc(db, "users", user.uid);
+      const docSnap = docRef && (await getDoc(docRef));
+      let firebaseData = {};
+
+      if (docSnap?.exists()) {
+        firebaseData = docSnap.data();
+        console.log("firebase data :", firebaseData);
+      }
+      setUserDataObj(firebaseData);
       setLoading(false);
     });
     return unsubscribe;

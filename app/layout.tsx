@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { Fugaz_One } from "next/font/google";
 import Link from "next/link";
+import { AuthProvider } from "@/context/AuthContext";
 
 const fugaz = Fugaz_One({ subsets: ["latin"], weight: ["400"] });
 
@@ -39,12 +40,14 @@ export default function RootLayout({
   );
   return (
     <html lang="en">
-      <body
-        className={`bg-background w-full max-w-[1000px] mx-auto text-md sm:text-base ${geistSans.variable} ${geistMono.variable}`}
-      >
-        {header}
-        {children}
-      </body>
+      <AuthProvider>
+        <body
+          className={`bg-background w-full max-w-[1000px] mx-auto text-md sm:text-base ${geistSans.variable} ${geistMono.variable}`}
+        >
+          {header}
+          {children}
+        </body>
+      </AuthProvider>
     </html>
   );
 }
